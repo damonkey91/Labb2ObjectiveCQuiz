@@ -13,6 +13,7 @@
 		725DDF9820139DB700C11258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 725DDF9720139DB700C11258 /* Assets.xcassets */; };
 		725DDF9B20139DB700C11258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725DDF9920139DB700C11258 /* LaunchScreen.storyboard */; };
 		725DDF9E20139DB700C11258 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 725DDF9D20139DB700C11258 /* main.m */; };
+		725DDFA62013A9EB00C11258 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 725DDFA52013A9EB00C11258 /* Quiz.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		725DDF9A20139DB700C11258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		725DDF9C20139DB700C11258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		725DDF9D20139DB700C11258 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		725DDFA42013A9EB00C11258 /* Quiz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Quiz.h; sourceTree = "<group>"; };
+		725DDFA52013A9EB00C11258 /* Quiz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				725DDF9120139DB700C11258 /* ViewController.h */,
 				725DDF9220139DB700C11258 /* ViewController.m */,
 				725DDF9420139DB700C11258 /* Main.storyboard */,
+				725DDFA42013A9EB00C11258 /* Quiz.h */,
+				725DDFA52013A9EB00C11258 /* Quiz.m */,
 				725DDF9720139DB700C11258 /* Assets.xcassets */,
 				725DDF9920139DB700C11258 /* LaunchScreen.storyboard */,
 				725DDF9C20139DB700C11258 /* Info.plist */,
@@ -144,6 +149,7 @@
 			files = (
 				725DDF9320139DB700C11258 /* ViewController.m in Sources */,
 				725DDF9E20139DB700C11258 /* main.m in Sources */,
+				725DDFA62013A9EB00C11258 /* Quiz.m in Sources */,
 				725DDF9020139DB700C11258 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
