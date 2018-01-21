@@ -77,6 +77,7 @@
                         <outlet property="button2" destination="3dD-HN-s3l" id="iZg-qY-DMx"/>
                         <outlet property="button3" destination="ydu-mE-jmD" id="RJq-3H-jZq"/>
                         <outlet property="button4" destination="ftE-8h-YgV" id="ZWj-tg-Pio"/>
+                        <outlet property="nextButton" destination="5h8-bm-K73" id="tdN-pI-4lv"/>
                         <outlet property="questionTextView" destination="l8c-Al-66i" id="ehp-Tu-RYX"/>
                     </connections>
                 </viewController>

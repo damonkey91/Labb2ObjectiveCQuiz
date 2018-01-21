@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Quiz : NSObject
-
+-(instancetype)init;
+-(void)chooseQuestion;
+-(NSArray*)questionAndAnswer;
+-(BOOL)isRightAnswer:(NSString*)string;
 @end
