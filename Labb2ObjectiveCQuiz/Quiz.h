@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Quiz : NSObject
+@property (nonatomic) int points;
+
 -(instancetype)init;
 -(void)chooseQuestion;
 -(NSArray*)questionAndAnswer;
