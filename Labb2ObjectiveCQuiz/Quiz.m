@@ -10,6 +10,7 @@
 @interface Quiz()
 @property (nonatomic) NSArray *questions;
 @property (nonatomic) int questionNr;
+@property (nonatomic) NSMutableSet *usedQuestions;
 @end
 
 @implementation Quiz
@@ -31,13 +32,18 @@
         @[@"Vad står ATP för?", @"Adenosintrifosfat", @"Alanintrifosfat", @"Arginintrifosfat", @"Asparagintrifosfat"],
         @[@"Vilken är den rätta kopplingen mellan basparen i DNA?", @"A-T, C-G", @"A-R, C-G", @"A-G, C-T", @"T-G, A-C"]];
     [self chooseQuestion];
+    self.usedQuestions = [[NSMutableSet alloc] init];
     return self;
 }
 
 -(void)chooseQuestion{
-    self.questionNr = arc4random_uniform(self.questions.count);
+    NSNumber *number;
+    do{
+        number = [NSNumber numberWithInt:arc4random_uniform(self.questions.count)];
+    }while([self.usedQuestions containsObject:number]);
+    [self.usedQuestions addObject:number];
+    self.questionNr = [number intValue];
 }
-
 -(NSArray*)questionAndAnswer{
     NSMutableArray *answersArray = [[NSMutableArray alloc] init];
     [answersArray addObject:self.questions[self.questionNr][0]];
@@ -67,5 +73,9 @@
         self.points++;
     }
     return answer;
+}
+
+-(BOOL)endGame{
+    return self.usedQuestions.count == 4;
 }
 @end

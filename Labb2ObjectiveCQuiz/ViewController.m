@@ -49,6 +49,9 @@
 }
 
 - (IBAction)next:(id)sender {
+    if ([self.quiz endGame]) {
+        // TODO popup that asks if you want to play again or close app.
+    }
     self.tmpButton.backgroundColor = [UIColor whiteColor];
     [self disableOrEnableButtons:YES];
     [self.quiz chooseQuestion];

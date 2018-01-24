@@ -15,4 +15,5 @@
 -(void)chooseQuestion;
 -(NSArray*)questionAndAnswer;
 -(BOOL)isRightAnswer:(NSString*)string;
+-(BOOL)endGame;
 @end
