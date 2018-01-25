@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "TableViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *questionTextView;
@@ -50,7 +51,9 @@
 
 - (IBAction)next:(id)sender {
     if ([self.quiz endGame]) {
-        // TODO popup that asks if you want to play again or close app.
+        TableViewController *tableView = [self.storyboard instantiateViewControllerWithIdentifier:@"TableIdentifier"];
+       tableView.quiz = self.quiz;
+        [self.navigationController pushViewController:tableView animated:YES];
     }
     self.tmpButton.backgroundColor = [UIColor whiteColor];
     [self disableOrEnableButtons:YES];

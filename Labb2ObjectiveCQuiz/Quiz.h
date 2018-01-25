@@ -16,4 +16,5 @@
 -(NSArray*)questionAndAnswer;
 -(BOOL)isRightAnswer:(NSString*)string;
 -(BOOL)endGame;
+-(NSArray*)getUsedQuestions;
 @end

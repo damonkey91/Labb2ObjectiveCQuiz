@@ -20,9 +20,10 @@
         @[@"När använder man antibiotika?", @"Mot bakterier", @"Mot virus", @"Mot cancer", @"Mot parasiter"],
         @[@"Vilket organ är störst?", @"Lever", @"Njure", @"Hjärta", @"Mjälte"],
         @[@"Var produceras kortison?", @"Binjuren", @"Pankreas", @"Thymus", @"Tyroidea"],
-        @[@"Vilke är den kemiska benämningen för bly?", @"Pb", @"Hg", @"Ag", @"B"],
+        @[@"Vilken är den kemiska benämningen för bly?", @"Pb", @"Hg", @"Ag", @"B"],
         @[@"Vilken är den kemiska benämningen för syre?", @"O", @"S", @"Si", @"Fe"],
-        @[@"Naturliga pärlor bildas inte i musslor såvida det inte är...?", @"ett intrång", @"brist på mat", @"brist på syre", @"jordbävning"],
+        @[@"Naturliga pärlor bildas inte i musslor såvida det inte är...?", @"ett intrång", @"brist på mat", @"brist på syre", @"jordbävning"]];
+        /*,
         @[@"Vilken är den kemiska benämningen för etanol(alkohol)?", @"C2H5OH", @"CH3OH", @"C3H7OH", @"C4H9OH"],
         @[@"Vilken grupp är en tiol?", @"R-SH", @"R-OH", @"R-NH2", @"R-COO-R"],
         @[@"Vilken är en ester?", @"R-COO-R", @"R-O-R", @"R-COOH", @"R-CHO"],
@@ -31,8 +32,9 @@
         @[@"Vilken ändelse slutar akoholer på?", @"-ol", @"-on", @"-os", @"-al"],
         @[@"Vad står ATP för?", @"Adenosintrifosfat", @"Alanintrifosfat", @"Arginintrifosfat", @"Asparagintrifosfat"],
         @[@"Vilken är den rätta kopplingen mellan basparen i DNA?", @"A-T, C-G", @"A-R, C-G", @"A-G, C-T", @"T-G, A-C"]];
-    [self chooseQuestion];
+         */
     self.usedQuestions = [[NSMutableSet alloc] init];
+    [self chooseQuestion];
     return self;
 }
 
@@ -44,6 +46,7 @@
     [self.usedQuestions addObject:number];
     self.questionNr = [number intValue];
 }
+
 -(NSArray*)questionAndAnswer{
     NSMutableArray *answersArray = [[NSMutableArray alloc] init];
     [answersArray addObject:self.questions[self.questionNr][0]];
@@ -76,6 +79,18 @@
 }
 
 -(BOOL)endGame{
-    return self.usedQuestions.count == 4;
+    return self.usedQuestions.count == 5;
+}
+
+-(void)newGame{
+    
+}
+-(NSArray*)getUsedQuestions{
+    NSMutableArray *arrayQuestions = [[NSMutableArray alloc] init];
+    for (NSNumber *index in self.usedQuestions) {
+        
+        [arrayQuestions addObject:self.questions[index.intValue]];
+    }
+    return arrayQuestions;
 }
 @end
