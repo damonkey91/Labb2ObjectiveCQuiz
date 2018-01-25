@@ -7,6 +7,7 @@
 //
 
 #import "TableViewController.h"
+#import "DetailViewController.h"
 
 @interface TableViewController ()
 
@@ -83,14 +84,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    UITableViewCell *cell = sender;
+    
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    int index = path.row;
+    DetailViewController *controller = [segue destinationViewController];
+    controller.question = [self.quiz getUsedQuestions][index];
 }
-*/
+
 
 @end

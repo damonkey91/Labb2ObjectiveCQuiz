@@ -15,6 +15,7 @@
 		725DDF9E20139DB700C11258 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 725DDF9D20139DB700C11258 /* main.m */; };
 		725DDFA62013A9EB00C11258 /* Quiz.m in Sources */ = {isa = PBXBuildFile; fileRef = 725DDFA52013A9EB00C11258 /* Quiz.m */; };
 		72F774DA201A5398006E3179 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F774D9201A5398006E3179 /* TableViewController.m */; };
+		72F774DD201A7CD8006E3179 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F774DC201A7CD8006E3179 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		725DDFA52013A9EB00C11258 /* Quiz.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quiz.m; sourceTree = "<group>"; };
 		72F774D8201A5398006E3179 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		72F774D9201A5398006E3179 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		72F774DB201A7CD8006E3179 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		72F774DC201A7CD8006E3179 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				725DDF9420139DB700C11258 /* Main.storyboard */,
 				72F774D8201A5398006E3179 /* TableViewController.h */,
 				72F774D9201A5398006E3179 /* TableViewController.m */,
+				72F774DB201A7CD8006E3179 /* DetailViewController.h */,
+				72F774DC201A7CD8006E3179 /* DetailViewController.m */,
 				725DDFA42013A9EB00C11258 /* Quiz.h */,
 				725DDFA52013A9EB00C11258 /* Quiz.m */,
 				725DDF9720139DB700C11258 /* Assets.xcassets */,
@@ -157,6 +162,7 @@
 				725DDFA62013A9EB00C11258 /* Quiz.m in Sources */,
 				72F774DA201A5398006E3179 /* TableViewController.m in Sources */,
 				725DDF9020139DB700C11258 /* AppDelegate.m in Sources */,
+				72F774DD201A7CD8006E3179 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
