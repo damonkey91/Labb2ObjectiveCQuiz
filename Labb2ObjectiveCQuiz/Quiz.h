@@ -10,6 +10,7 @@
 
 @interface Quiz : NSObject
 @property (nonatomic) int points;
+@property (nonatomic) NSMutableDictionary *yourAnswers;
 
 -(instancetype)init;
 -(void)chooseQuestion;

@@ -21,13 +21,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    NSArray * labels = @[@"empty" ,self.label1, self.label2, self.label3, self.label4];
     self.textView.text =self.question[0];
+    
     self.label1.text = self.question[1];
     self.label1.backgroundColor = [UIColor greenColor];
     self.label2.text = self.question[2];
     self.label3.text = self.question[3];
     self.label4.text = self.question[4];
+    
+    if (self.yourAnswer != 1) {
+        UILabel *label = labels[self.yourAnswer];
+        label.backgroundColor = [UIColor redColor];
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -10,4 +10,5 @@
 
 @interface DetailViewController : UIViewController
 @property (nonatomic)NSArray *question;
+@property (nonatomic) int yourAnswer;
 @end

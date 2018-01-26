@@ -33,19 +33,25 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     int nr = [self.quiz getUsedQuestions].count;
-    return nr;
+    if (section == 0) {
+        return 1;
+    }else
+        return nr;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"tableView" forIndexPath:indexPath];
-    int index = indexPath.row;
-    cell.textLabel.text = [self.quiz getUsedQuestions][index][0];
-    
+    if (indexPath.section == 1) {
+        int index = indexPath.row;
+        cell.textLabel.text = [self.quiz getUsedQuestions][index][0];
+    }else{
+        cell.textLabel.text = [NSString stringWithFormat:@"Du fick %i poäng!",self.quiz.points];
+    }
     return cell;
 }
 
@@ -89,12 +95,14 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    UITableViewCell *cell = sender;
-    
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     int index = path.row;
     DetailViewController *controller = [segue destinationViewController];
     controller.question = [self.quiz getUsedQuestions][index];
+    
+    NSString *key = [self.quiz getUsedQuestions][index][1];
+    int nr = [[self.quiz.yourAnswers objectForKey: key] intValue];
+    controller.yourAnswer = nr;
 }
 
 

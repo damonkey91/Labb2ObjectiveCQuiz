@@ -54,11 +54,12 @@
         TableViewController *tableView = [self.storyboard instantiateViewControllerWithIdentifier:@"TableIdentifier"];
        tableView.quiz = self.quiz;
         [self.navigationController pushViewController:tableView animated:YES];
+    }else{
+        [self.quiz chooseQuestion];
+        [self insertText];
     }
     self.tmpButton.backgroundColor = [UIColor whiteColor];
     [self disableOrEnableButtons:YES];
-    [self.quiz chooseQuestion];
-    [self insertText];
     self.nextButton.hidden = YES;
     
 }
@@ -79,4 +80,9 @@
     self.button4.enabled = choise;
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    self.quiz = [[Quiz alloc] init];
+    [self insertText];
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.quiz.points];
+}
 @end

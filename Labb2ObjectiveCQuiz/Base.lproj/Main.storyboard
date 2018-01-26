@@ -86,7 +86,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xpO-0q-LUO"/>
+                    <navigationItem key="navigationItem" id="xpO-0q-LUO">
+                        <barButtonItem key="backBarButtonItem" title="Play again" id="aox-mX-Fyh"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="button1" destination="dwm-9B-SLv" id="aUq-Fi-sND"/>
                         <outlet property="button2" destination="3dD-HN-s3l" id="iZg-qY-DMx"/>
